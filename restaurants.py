@@ -1,71 +1,18 @@
 # -*- coding:utf-8 -*-
-approved_restaurants = [
-    {
-        'name': 'Alma Carioca',
-        'expensive': True
-    },
-    {
-        'name': 'Sociedade Secreta',
-        'expensive': False
-    },
-    {
-        'name': 'Parmê',
-        'expensive': False
-    },
-    {
-        'name': 'Montana Grill',
-        'expensive': True
-    },
-    {
-        'name': 'Otime',
-        'expensive': False
-    },
-    {
-        'name': 'Mexicano',
-        'expensive': False
-    },
-    {
-        'name': 'Gourmet',
-        'expensive': True
-    },
-    {
-        'name': 'As meninas',
-        'expensive': False
-    },
-    {
-        'name': 'Imperial',
-        'expensive': False
-    },
-    {
-        'name': 'Colarinho',
-        'expensive': True
-    },
-    {
-        'name': 'Versão Carioca',
-        'expensive': True
-    },
-    {
-        'name': 'Boteco 98',
-        'expensive': False
-    },
-    {
-        'name': 'KFC',
-        'expensive': False
-    },
-    {
-        'name': 'Planeta Grill',
-        'expensive': False
-    },
-    {
-        'name': 'Atrium',
-        'expensive': False
-    },
-    {
-        'name': 'Sabor & Recheio',
-        'expensive': False
-    },
-    {
-        'name': 'Chopp Time',
-        'expensive': True
-    }
-]
+approved_restaurants = (
+    ('Alma Carioca', 1),
+    ('Montana Grill', 1),
+    ('Otime', 0),
+    ('Parme', 0),
+    ('Mexicano', 0),
+    ('Gourmet', 1),
+    ('As meninas', 0),
+    ('Imperial', 0),
+    ('Colarinho', 1),
+    ('Versao carioca', 1),
+    ('Boteco 98', 0),
+    ('Atrium', 0),
+    ('Sabor e Recheio', 0),
+    ('Chopp Time', 0),
+    ('Escritorio', 1),
+)
