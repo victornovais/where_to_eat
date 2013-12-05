@@ -9,11 +9,11 @@ try:
     cursor = connection.cursor()
 
     cursor.executescript("""
-        DROP TABLE IF EXISTS Restaurant;
-        CREATE TABLE Restaurant(Id INTEGER PRIMARY KEY, Name TEXT, Expensive NUMERIC, Times INTEGER DEFAULT 0);
+        DROP TABLE IF EXISTS restaurant;
+        CREATE TABLE restaurant(id INTEGER PRIMARY KEY, name TEXT, expensive NUMERIC, times INTEGER DEFAULT 0);
     """)
 
-    cursor.executemany("INSERT INTO Restaurant (Name, Expensive) VALUES(?, ?)", my_restaurants)
+    cursor.executemany("INSERT INTO restaurant (name, expensive) VALUES(?, ?)", my_restaurants)
 
     connection.commit()
 

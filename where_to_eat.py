@@ -17,7 +17,7 @@ def fetch_restaurants():
     connection = connection_factory()
     cursor = connection.cursor()
 
-    sql = "SELECT * FROM Restaurant WHERE Times = (SELECT MIN(Times) FROM Restaurant)"
+    sql = "SELECT * FROM restaurant WHERE times = (SELECT MIN(times) FROM restaurant)"
 
     if not has_money():
         sql += " AND Expensive = 0"
@@ -30,7 +30,7 @@ def where_to_eat():
     restaurants = fetch_restaurants()
     chosen_one = choice(restaurants)
 
-    print chosen_one
+    print chosen_one['name']
 
 
 
