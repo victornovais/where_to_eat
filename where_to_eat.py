@@ -1,11 +1,36 @@
 # -*- coding: utf-8 -*-
-from settings import approved_restaurants as my_restaurants
 from random import choice
+from datetime import datetime
+from settings import LIMIT_DATE
+from connection import connection_factory
 
+
+def has_money():
+    today = datetime.now().day
+
+    if today < LIMIT_DATE:
+        return True
+
+    return False
+
+def fetch_restaurants():
+    connection = connection_factory()
+    cursor = connection.cursor()
+
+    sql = "SELECT * FROM Restaurant WHERE Times = (SELECT MIN(Times) FROM Restaurant)"
+
+    if not has_money():
+        sql += " AND Expensive = 0"
+
+    cursor.execute(sql)
+
+    return cursor.fetchall()
 
 def where_to_eat():
-    chosen_one = choice(my_restaurants)
-    print chosen_one['name']
+    restaurants = fetch_restaurants()
+    chosen_one = choice(restaurants)
+
+    print chosen_one
 
 
 
