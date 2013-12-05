@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 
-# Approved restaurants must be here
+# Approved restaurants must be here.
 # Example: ('McDonalds', 0,) -> Not expensive
 #          ('The Fifties', 1,) -> Expensive
 
-approved_restaurants = (
+APPROVED_RESTAURANTS = (
     ('Alma Carioca', 1),
     ('Montana Grill', 1),
     ('Otime', 0),
@@ -21,3 +21,6 @@ approved_restaurants = (
     ('Chopp Time', 0),
     ('Escritorio', 1),
 )
+
+# This setting determines until what day of the month you're willing to pay more for better(or not) meal.
+LIMIT_DATE = 10
