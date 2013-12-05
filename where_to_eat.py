@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from restaurants import approved_restaurants as my_restaurants
+from settings import approved_restaurants as my_restaurants
 from random import choice
 
 

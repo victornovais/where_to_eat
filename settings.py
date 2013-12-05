@@ -1,4 +1,9 @@
 # -*- coding:utf-8 -*-
+
+# Approved restaurants must be here
+# Example: ('McDonalds', 0,) -> Not expensive
+#          ('The Fifties', 1,) -> Expensive
+
 approved_restaurants = (
     ('Alma Carioca', 1),
     ('Montana Grill', 1),

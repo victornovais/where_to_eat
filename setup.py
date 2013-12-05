@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import sqlite3 as lite
-from restaurants import approved_restaurants as my_restaurants
+from settings import approved_restaurants as my_restaurants
 
 try:
     connection = lite.connect('restaurant.db')
