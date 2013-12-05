@@ -1,10 +1,11 @@
 # -*- coding:utf-8 -*-
 import sqlite3 as lite
-from settings import approved_restaurants as my_restaurants
+from settings import APPROVED_RESTAURANTS as my_restaurants
+from connection import connection_factory
+
 
 try:
-    connection = lite.connect('restaurant.db')
-
+    connection = connection_factory()
     cursor = connection.cursor()
 
     cursor.executescript("""
